@@ -1,8 +1,21 @@
 body {font-family: "Roboto", sans-serif;
+    color: var(--main-text-color);
+    letter-spacing: 0.03em;
 }  
 
+:root{
+--main-text-color: #212121;
+--secondary-text-color: #757575;
+--footer-text-color: rgba(255, 255, 255, 0.6);
+--accent-color: #2196F3;
+--main-bg-color: #E5E5E5;
+--accent-bg-color: #2F303A;
+--header-bg-color: #ffffff;
+--secondary-bg-color: #F5F4FA;
+}
+
 .header{
-    background-color: #ffffff;
+    background-color: var(--header-bg-color);
 }
 .site-nav .link
 { 
@@ -12,17 +25,16 @@ body {font-family: "Roboto", sans-serif;
     letter-spacing: 0.02em; }
 
     .logo{
- 
-        font-family: 'Raleway';
+
+        font-family: 'Raleway', sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
-letter-spacing: 0.03em;
-       text-decoration: none;
+text-decoration: none;
     }
 
 .web{
-color: #2196F3 ;
+color: var(--accent-color) ;
 }
 .studio{
 color: #000000 ;
@@ -33,16 +45,16 @@ color: #000000 ;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-color: #212121;
+color: var(--main-text-color);
 text-decoration: none;
 }
 .site-nav .link.current{
-    color: #2196F3;
+    color: var(--accent-color);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus{
-color: #2196F3 ;
+color: var(--accent-color) ;
 }
 
 .list{
@@ -54,18 +66,18 @@ color: #2196F3 ;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-    color: #757575;
+    color: var(--secondary-text-color);
     text-decoration: none;
 }
 
 .contacts .link:hover,
 .contacts .link:focus
 {
-    color: #2196F3 ;
+    color: var(--accent-color) ;
 }
 
 .hero{
-    background-color:#2F303A;
+    background-color: var(--accent-bg-color);
 }
 
 .hero-title{
@@ -74,7 +86,7 @@ font-size: 44px;
 line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
-color: #FFFFFF;
+color: var(--header-bg-color);
 }
 
 .button{
@@ -82,29 +94,31 @@ color: #FFFFFF;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.06em;
-background-color: #2196F3;
-color: #FFFFFF;
+background-color: var(--accent-color);
+color: var(--header-bg-color);
+cursor: pointer
+}
+
+.button:focus{
+    color: var(--main-text-color);
 }
 
 .advantage{
-    background-color: #E5E5E5;
+    background-color: var(--main-bg-color);
 }
 
 .advantage-item {
     font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
-letter-spacing: 0.03em;
 text-transform: uppercase;
-color: #212121;
+color: var(--main-text-color);
 }
 
 .advantage-description{
-    font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
-letter-spacing: 0.03em;
-color: #757575;
+color: var(--secondary-text-color);
 }
 
 .examples-title .team-title {
@@ -112,48 +126,77 @@ color: #757575;
 font-size: 36px;
 line-height: 1.17;
 text-align: center;
-letter-spacing: 0.03em;
-color: #212121;
+color: var(--main-text-color);
 }
 
 .team{
-    background-color: #F5F4FA;
+    background-color: var(--secondary-bg-color);
 }
 .team-member-name{
     font-weight: 500;
 font-size: 16px;
 line-height: 1.19;
-letter-spacing: 0.03em;
-color: #212121;
 }
 .team-member-description{
-    font-weight: 400;
 font-size: 16px;
 line-height: 1.19;
-letter-spacing: 0.03em;
-color: #757575;
+color: var(--secondary-text-color);
 }
 
 .footer{
-    background-color: #2F303A;
+    background-color: var(--accent-bg-color);
 }
 .footer .studio{
-    color: #FFFFFF;
+    color: var(--header-bg-color);
 }
 .location{
-    font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
-letter-spacing: 0.03em;
-color: #FFFFFF;
+color: var(--header-bg-color);
 text-decoration: none;
 }
 
+.location:focus,
+.location:hover{
+    color: var(--accent-color)
+}
 .adress .link{
-    font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+color: var(--footer-text-color);
 text-decoration: none;
+}
+
+.adress .link:focus,
+.adress .link:hover{
+    color: var(--accent-color)
+}
+
+.example .title{
+    font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color: var(--main-text-color);
+}
+
+.example .description{
+font-size: 16px;
+line-height: 1.89;
+color: var(--secondary-text-color);
+}
+
+.button.filter{
+font-weight: 500;
+font-size: 16px;
+line-height: 1.6;
+text-align: center;
+background-color: var(--secondary-bg-color);
+color: var(--main-text-color);
+cursor: pointer
+}
+
+.button.filter:hover{
+    color: var(--header-bg-color);
+    background-color: var(--accent-color);
 }
